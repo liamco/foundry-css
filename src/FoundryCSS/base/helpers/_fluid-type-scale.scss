@@ -1,0 +1,48 @@
+/*
+* Fluid Scaling
+*
+* Fluid Scaling allows us to generate styles for fully fluid typography
+* sizes, all while staying within a typographic scale. Pass it a scaling
+* factor and direction and it will do the rest.
+*
+*/
+
+@mixin fluid-type-scale($scale-factor: 0, $scale-up: true) {
+	$min-font-size: strip-unit($document-min-font-size);
+	$max-font-size: strip-unit($document-max-font-size);
+
+	@if $scale-factor > 0 {
+		@for $i from 1 through $scale-factor {
+			@if $scale-up {
+				$min-font-size: $min-font-size * $document-min-font-scale;
+			} @else {
+				$min-font-size: $min-font-size / $document-min-font-scale;
+			}
+		}
+		@for $i from 1 through $scale-factor {
+			@if $scale-up {
+				$max-font-size: $max-font-size * $document-max-font-scale;
+			} @else {
+				$max-font-size: $max-font-size / $document-max-font-scale;
+			}
+		}
+	}
+
+	$min-font-size: $min-font-size * 1px;
+	$max-font-size: $max-font-size * 1px;
+
+	$u1: unit($document-min-width);
+	$u2: unit($document-max-width);
+	$u3: unit($min-font-size);
+	$u4: unit($max-font-size);
+
+	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+		font-size: $min-font-size;
+		@media screen and (min-width: $document-min-width) {
+			font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$document-min-width}) / #{strip-unit($document-max-width - $document-min-width)}));
+		}
+		@media screen and (min-width: $document-max-width) {
+			font-size: $max-font-size;
+		}
+	}
+}

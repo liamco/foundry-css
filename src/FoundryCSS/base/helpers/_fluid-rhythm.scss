@@ -1,0 +1,34 @@
+@mixin fluid-rhythm($min-rhythm, $max-rhythm, $direction: "both") {
+	$u1: unit($document-min-width);
+	$u2: unit($document-max-width);
+	$u3: unit($min-rhythm);
+	$u4: unit($max-rhythm);
+
+	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+		& {
+			@if ($direction == "both" or $direction == "top") {
+				margin-top: $min-rhythm;
+
+				@media screen and (min-width: $document-min-width) {
+					margin-top: calc(#{$min-rhythm} + #{strip-unit($max-rhythm - $min-rhythm)} * ((100vw - #{$document-min-width}) / #{strip-unit($document-max-width - $document-min-width)}));
+				}
+
+				@media screen and (min-width: $document-max-width) {
+					margin-top: $max-rhythm;
+				}
+			}
+
+			@if ($direction == "both" or $direction == "bottom") {
+				margin-bottom: $min-rhythm;
+
+				@media screen and (min-width: $document-min-width) {
+					margin-bottom: calc(#{$min-rhythm} + #{strip-unit($max-rhythm - $min-rhythm)} * ((100vw - #{$document-min-width}) / #{strip-unit($document-max-width - $document-min-width)}));
+				}
+
+				@media screen and (min-width: $document-max-width) {
+					margin-bottom: $max-rhythm;
+				}
+			}
+		}
+	}
+}

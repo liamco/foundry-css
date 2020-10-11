@@ -7,9 +7,12 @@
  * 2. Rhythm & Spacing
  * 3. Typography
  * 4. Colours
- * 5. Common Border Radii
- * 6. Layers
- * 7. Responsive breakpoints
+ * 5. Borders
+ * 6. Shadows
+ * 7. Layers
+ * 8. Transition Properties
+ * 9. Responsive Breakpoints
+ * 10. Paths
  *
  */
 
@@ -19,7 +22,15 @@
  * Set the base font-size and line-height for the project.
  */
 
-$document-font-size: 16px !default;
+$document-min-width: 320px !default;
+$document-max-width: 1440px !default;
+
+$document-min-font-size: 16px !default;
+$document-max-font-size: 18px !default;
+
+$document-min-font-scale: 1.2 !default;
+$document-max-font-scale: 1.333 !default;
+
 $document-line-height: 1.6 !default;
 
 /*
@@ -101,7 +112,7 @@ $gradients: (
 ) !default;
 
 /*
- * 5. Border
+ * 5. Borders
  *
  * Border based variables.
  *
@@ -139,7 +150,24 @@ $layers: (
 ) !default;
 
 /*
- * 8. Breakpoints
+ * 8. Transition properties
+ *
+ * Default transition properties to keep transitions consistent throughout a project.
+ * Accessible via easing($key) and timing($key)
+ */
+
+$transition-timings: (
+	"default": cubic-bezier(0.15, 0.66, 0.46, 0.98),
+) !default;
+
+$transition-easings: (
+	"slow": 1000ms,
+	"normal": 500ms,
+	"fast": 250ms,
+) !default;
+
+/*
+ * 9. Breakpoints
  *
  * Foundry works mobile-first, so the majority of our media queries are based on min-width;
  * These breakpoints represent the lower bound of a media query or grid layout
@@ -155,7 +183,7 @@ $breakpoints: (
 ) !default;
 
 /*
- * 9. Paths
+ * 10. Paths
  *
  * Commonly used paths for locating image assets, font files, etc.
  *

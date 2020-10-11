@@ -1,0 +1,14 @@
+/*
+* Transition Timing
+* The timing function pulls values from the $transition-timings sass-map.
+*
+*/
+
+@function timing($timing) {
+	@if (map-has-key($transition-timings, $timing)) {
+		@return map-get($transition-timings, $timing);
+	} @else {
+		@warn 'Requested transition timing '$timing' not found';
+		@return map-get($transition-timings, "default");
+	}
+}

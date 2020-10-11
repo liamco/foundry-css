@@ -16,12 +16,15 @@
 
 @import "core/strip-unit"; // Needs to be first, as other functions depend on it
 @import "core/color";
+@import "core/easing";
 @import "core/font-family";
 @import "core/font-size";
 @import "core/font-weight";
 @import "core/layer";
 @import "core/lower-bound";
 @import "core/upper-bound";
+@import "core/pow";
 @import "core/rem-calc";
 @import "core/rhythm";
 @import "core/spacing";
+@import "core/timing";

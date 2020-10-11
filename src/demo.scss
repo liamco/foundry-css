@@ -123,3 +123,15 @@ body.demo {
 		padding: spacing(8) spacing(4);
 	}
 }
+
+.demo-fluid-padding {
+	@include fluid-padding(28.8px, 57.6px);
+}
+
+.demo-fluid-rhythm {
+	@include fluid-rhythm(28.8px, 57.6px, "top");
+}
+
+.demo-fluid-type {
+	@include fluid-type(36px, 72px);
+}

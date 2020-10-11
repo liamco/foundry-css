@@ -7,14 +7,14 @@
 
 %island,
 .island {
-    margin-bottom: rhythm(map-get($island-sizes, "default"));
+	margin-top: rhythm(map-get($island-sizes, "default"));
 }
 
 /* Sizes */
 
 @each $key, $size in $island-sizes {
-    %island--#{$key},
-    .island--#{$key} {
-        margin-bottom: rhythm($size);
-    }
+	%island--#{$key},
+	.island--#{$key} {
+		margin-top: rhythm($size);
+	}
 }

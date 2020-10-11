@@ -1,0 +1,34 @@
+@mixin fluid-padding($min-rhythm, $max-rhythm, $direction: "both") {
+	$u1: unit($document-min-width);
+	$u2: unit($document-max-width);
+	$u3: unit($min-rhythm);
+	$u4: unit($max-rhythm);
+
+	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+		& {
+			@if ($direction == "both" or $direction == "top") {
+				padding-top: $min-rhythm;
+
+				@media screen and (min-width: $document-min-width) {
+					padding-top: calc(#{$min-rhythm} + #{strip-unit($max-rhythm - $min-rhythm)} * ((100vw - #{$document-min-width}) / #{strip-unit($document-max-width - $document-min-width)}));
+				}
+
+				@media screen and (min-width: $document-max-width) {
+					padding-top: $max-rhythm;
+				}
+			}
+
+			@if ($direction == "both" or $direction == "bottom") {
+				padding-bottom: $min-rhythm;
+
+				@media screen and (min-width: $document-min-width) {
+					padding-bottom: calc(#{$min-rhythm} + #{strip-unit($max-rhythm - $min-rhythm)} * ((100vw - #{$document-min-width}) / #{strip-unit($document-max-width - $document-min-width)}));
+				}
+
+				@media screen and (min-width: $document-max-width) {
+					padding-bottom: $max-rhythm;
+				}
+			}
+		}
+	}
+}

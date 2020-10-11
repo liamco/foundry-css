@@ -1,0 +1,35 @@
+/*
+ * Cluster
+ *
+ * Heavily influenced by the cluster pattern from every-layout.dev
+ */
+
+@import "cluster-config";
+
+.cluster {
+	overflow: hidden;
+	--space: #{map-get($cluster-sizes, "default")};
+}
+
+%cluster > *,
+.cluster > * {
+	display: flex;
+	flex-wrap: wrap;
+	margin: calc(var(--space) / 2 * -1);
+}
+
+/* Sizes */
+
+@each $key, $size in $cluster-sizes {
+	%cluster--#{$key},
+	.cluster--#{$key} {
+		--space: #{$size};
+	}
+}
+
+// Create a loop for generating sizes from various gutter configs
+
+%cluster__item,
+.cluster__item {
+	margin: calc(var(--space) / 2);
+}
