@@ -1,0 +1,25 @@
+/*
+ * Reel
+ * A class for generating a CSS-only carousel-style pattern.
+ */
+
+@import "reel-config";
+
+.reel {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	align-items: stretch;
+	scroll-snap-type: x mandatory;
+
+	&:after {
+		content: "";
+		flex-basis: $reel-spacing;
+		flex-shrink: 0;
+	}
+}
+
+.reel__item {
+	scroll-snap-align: start;
+	margin: $reel-spacing 0 $reel-spacing $reel-spacing;
+}
