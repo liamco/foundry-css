@@ -10,7 +10,7 @@
 /*
   * Project Theme;
   *
-  * Configures Foundry's UI styles - this should also pull in any seperate
+  * Configures Foundry's UI styles - this should also pull in any separate
   * per-module configuration files.
   */
 // @import 'theme';
@@ -34,6 +34,7 @@
 @import "FoundryCSS/ui/components/all";
 @import "FoundryCSS/ui/forms/all";
 @import "FoundryCSS/ui/layout/all";
+
 @import "FoundryCSS/tachyons/typography/all";
 @import "FoundryCSS/tachyons/utilities/all";
 
@@ -42,83 +43,83 @@
   */
 
 %demo-grid {
-    display: grid;
-    grid-gap: rhythm();
+	display: grid;
+	grid-gap: rhythm();
 }
 
 .demo-grid-2 {
-    @extend %demo-grid;
-    grid-template-columns: 1fr 1fr;
+	@extend %demo-grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 .demo-grid-3 {
-    @extend %demo-grid;
-    grid-template-columns: 1fr 1fr 1fr;
+	@extend %demo-grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 body.demo {
-    display: flex;
-    flex-direction: row;
-    padding-top: 5px;
+	display: flex;
+	flex-direction: row;
+	padding-top: 5px;
 
-    section {
-        padding: spacing(8) spacing(4);
-    }
+	section {
+		padding: spacing(8) spacing(4);
+	}
 
-    &:before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 5px;
-        background-color: color("alpha");
-    }
+	&:before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background-color: color("alpha");
+	}
 }
 
 .demo-label {
-    display: block;
-    text-transform: uppercase;
-    font-weight: font-weight("bold");
-    letter-spacing: 0.1em;
-    color: color("dark");
-    font-size: font-size("300");
+	display: block;
+	text-transform: uppercase;
+	font-weight: font-weight("bold");
+	letter-spacing: 0.1em;
+	color: color("dark");
+	font-size: font-size("300");
 }
 
 .demo-bookmark {
-    display: block;
-    transition: color 0.25s linear;
-    &:hover {
-        text-decoration: none;
-        color: color("alpha");
-    }
+	display: block;
+	transition: color 0.25s linear;
+	&:hover {
+		text-decoration: none;
+		color: color("alpha");
+	}
 
-    & + & {
-        margin-top: spacing(0.5);
-    }
+	& + & {
+		margin-top: spacing(0.5);
+	}
 }
 
 .demo-dialog {
-    width: 24rem;
+	width: 24rem;
 }
 
 .demo-limit-lines {
-    @include limit-lines(3);
+	@include limit-lines(3);
 }
 
 .demo-main {
-    flex-grow: 1;
+	flex-grow: 1;
 }
 
 .demo-aside {
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 24rem;
-    border-right: 1px solid color("shade");
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 24rem;
+	border-right: 1px solid color("shade");
 
-    > div {
-        position: fixed;
-        top: 0;
-        padding: spacing(8) spacing(4);
-    }
+	> div {
+		position: fixed;
+		top: 0;
+		padding: spacing(8) spacing(4);
+	}
 }

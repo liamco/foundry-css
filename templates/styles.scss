@@ -34,6 +34,19 @@
  */
 @import "FoundryCSS/ui/all";
 
+// Layout
+
+// @import 'FoundryCSS/ui/layout/all';
+
+// @import 'FoundryCSS/ui/layout/Breathe/breathe';
+// @import 'FoundryCSS/ui/layout/Container/container';
+// @import 'FoundryCSS/ui/layout/Flow/flow';
+// @import 'FoundryCSS/ui/layout/Grid/grid';
+// @import 'FoundryCSS/ui/layout/Indent/indent';
+// @import 'FoundryCSS/ui/layout/Island/island';
+// @import 'FoundryCSS/ui/layout/Pull/pull';
+// @import 'FoundryCSS/ui/layout/Wrapper/wrapper';
+
 // Blocks
 
 // @import 'FoundryCSS/ui/blocks/all';
@@ -43,7 +56,7 @@
 // @import 'FoundryCSS/ui/blocks/Button/button';
 // @import 'FoundryCSS/ui/blocks/Card/card';
 // @import 'FoundryCSS/ui/blocks/Hero/hero';
-// @import 'FoundryCSS/ui/blocks/HorizontalRule/horizontal-rule';
+// @import "FoundryCSS/ui/blocks/Separator/sep";
 // @import 'FoundryCSS/ui/blocks/Icon/icon';
 // @import 'FoundryCSS/ui/blocks/ResponsiveEmbed/responsive-embed';
 // @import 'FoundryCSS/ui/blocks/Tag/tag';
@@ -79,19 +92,6 @@
 // @import 'FoundryCSS/ui/forms/inputs/Text/text';
 // @import 'FoundryCSS/ui/forms/inputs/Textarea/textarea';
 // @import 'FoundryCSS/ui/forms/inputs/Toggle/toggle';
-
-// Layout
-
-// @import 'FoundryCSS/ui/layout/all';
-
-// @import 'FoundryCSS/ui/layout/Breathe/breathe';
-// @import 'FoundryCSS/ui/layout/Container/container';
-// @import 'FoundryCSS/ui/layout/Flow/flow';
-// @import 'FoundryCSS/ui/layout/Grid/grid';
-// @import 'FoundryCSS/ui/layout/Indent/indent';
-// @import 'FoundryCSS/ui/layout/Island/island';
-// @import 'FoundryCSS/ui/layout/Pull/pull';
-// @import 'FoundryCSS/ui/layout/Wrapper/wrapper';
 
 /*
  * 5. Project-level styles

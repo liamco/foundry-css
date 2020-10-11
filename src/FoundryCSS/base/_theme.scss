@@ -39,32 +39,32 @@ $horizontal-spacing: 0.5rem !default;
  */
 
 $font-families: (
-    "default": #{"museo-sans",
-    Helvetica,
-    Arial,
-    sans-serif},
-    "alt": #{"adelle",
-    Georgia,
-    serif}
+	"default": #{"museo-sans",
+	Helvetica,
+	Arial,
+	sans-serif},
+	"alt": #{"adelle",
+	Georgia,
+	serif},
 ) !default;
 
 $font-sizes: (
-    "100": 6.76px,
-    "200": 9px,
-    "300": 12px,
-    "400": 16px,
-    "500": 21.33px,
-    "600": 28.43px,
-    "700": 37.9px,
-    "800": 50.52px,
-    "900": 67.34px
+	"100": 6.76px,
+	"200": 9px,
+	"300": 12px,
+	"400": 16px,
+	"500": 21.33px,
+	"600": 28.43px,
+	"700": 37.9px,
+	"800": 50.52px,
+	"900": 67.34px,
 ) !default;
 
 $font-weights: (
-    "light": 100,
-    "default": 400,
-    "semibold": 500,
-    "bold": 700
+	"light": 100,
+	"default": 400,
+	"semibold": 500,
+	"bold": 700,
 ) !default;
 
 /*
@@ -73,31 +73,31 @@ $font-weights: (
  * Colours are stored in pairs in a SASS map - each pair contains a theme colour, as well
  * as a corresponding colour for use in text to ensure proper contrast.
  *
- * Gradients are stored in a seperate SASS map as they need to be accessed differently.
+ * Gradients are stored in a separate SASS map as they need to be accessed differently.
  *
  */
 
 $colors: (
-    "default": #4a4a4a,
-    "white": #ffffff,
-    "canvas": #fafafa,
-    "alpha": #ff686c,
-    "dark": #777777,
-    "mid": #9b9b9b,
-    "light": #d8d8d8,
-    "shade": #dedede,
-    "success": #aad091,
-    "warning": #efbc68,
-    "error": #d17580,
-    "info": #9cc9df,
-    "facebook": #3b5998,
-    "twitter": #1da1f2,
-    "linkedin": #0077b5
+	"default": #4a4a4a,
+	"white": #ffffff,
+	"canvas": #fafafa,
+	"alpha": #ff686c,
+	"dark": #777777,
+	"mid": #9b9b9b,
+	"light": #d8d8d8,
+	"shade": #dedede,
+	"success": #aad091,
+	"warning": #efbc68,
+	"error": #d17580,
+	"info": #9cc9df,
+	"facebook": #3b5998,
+	"twitter": #1da1f2,
+	"linkedin": #0077b5,
 ) !default;
 
 $gradients: (
-    alpha: linear-gradient(315deg, #f5b840, map-get($colors, "alpha")),
-    beta: linear-gradient(315deg, #12b1c9, map-get($colors, "beta"))
+	alpha: linear-gradient(315deg, #f5b840, map-get($colors, "alpha")),
+	beta: linear-gradient(315deg, #12b1c9, map-get($colors, "beta")),
 ) !default;
 
 /*
@@ -118,9 +118,7 @@ $corner-radius: 0.25rem !default;
  *
  */
 
-$box-shadow: 0 #{$horizontal-spacing} #{$horizontal-spacing * 2} 0
-        rgba(map-get($colors, "default"), 0.1),
-    0 1px 2px 0 rgba(map-get($colors, "default"), 0.1);
+$box-shadow: 0 #{$horizontal-spacing} #{$horizontal-spacing * 2} 0 rgba(map-get($colors, "default"), 0.1), 0 1px 2px 0 rgba(map-get($colors, "default"), 0.1);
 
 /*
  * 7. Layers
@@ -131,13 +129,13 @@ $box-shadow: 0 #{$horizontal-spacing} #{$horizontal-spacing * 2} 0
  */
 
 $layers: (
-    "toast": 1000,
-    "overlay": 950,
-    "navigation": 900,
-    "loading": 800,
-    "modals": 700,
-    "notifications": 600,
-    "header": 500
+	"toast": 1000,
+	"overlay": 950,
+	"navigation": 900,
+	"loading": 800,
+	"modals": 700,
+	"notifications": 600,
+	"header": 500,
 ) !default;
 
 /*
@@ -149,11 +147,11 @@ $layers: (
  */
 
 $breakpoints: (
-    "small": 320px,
-    "medium": 480px,
-    "large": 768px,
-    "xlarge": 1140px,
-    "xxlarge": 1440px
+	"small": 320px,
+	"medium": 480px,
+	"large": 768px,
+	"xlarge": 1140px,
+	"xxlarge": 1440px,
 ) !default;
 
 /*
