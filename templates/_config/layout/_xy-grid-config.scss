@@ -1,18 +1,5 @@
 /*
- * Grid Config
- *
- * 1. Column Count
- * 2. Gutter Size
- * 3. Grid Breakpoints
- *
- */
-
-$grid-columns: 12 !default;
-$grid-gutters: rhythm() !default;
-$grid-breakpoints: $breakpoints !default;
-
-/*
- * XY grid configuration
+ * XY grid config
  *
  * The following acts as a project-level plugin which adds variables used by
  * the Foundation XY grid. Enable these and configure as required if using
